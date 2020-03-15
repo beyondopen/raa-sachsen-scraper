@@ -8,7 +8,7 @@ from dateparser import parse
 
 os.environ["SCRAPERWIKI_DATABASE_NAME"] = "sqlite:///data.sqlite"
 
-DEBUG = True
+DEBUG = False
 
 def split_date_county(t):
     t = normalize_whitespace(t, no_line_breaks=True)
