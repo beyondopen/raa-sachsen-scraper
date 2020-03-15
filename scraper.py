@@ -57,13 +57,15 @@ def process_page(doc):
             # old format
             sources = entry.xpath(".//p[@style='text-align: right;']//text()")
             if len(sources) == 0:
-                sources = 'Quelle unbekannt'
+                sources = None
             else:
                 sources = sources[0]
                 text_list = text_list[:-1]
 
-        sources = [t.strip() for t in sources.split(',')]
+        if not sources is None:
+            sources = [t.strip() for t in sources.split(',')]
 
+        title = None
         if len(text_list) > 1 and len(text_list[0]) * 2 < len(text_list[1]):
             title = text_list[0]
             text_list = text_list[1:]
@@ -76,6 +78,7 @@ def process_page(doc):
             unique_keys=["uri"],
             data={
                 "description": description,
+                "title": title,
                 "startDate": date,
                 "iso3166_2": "DE-SN",
                 "uri": uri,
@@ -89,12 +92,13 @@ def process_page(doc):
             table_name="location",
         )
 
-        for s in sources:
-            scraperwiki.sqlite.save(
-                unique_keys=["reportURI"],
-                data={"name": s, "reportURI": uri},
-                table_name="source",
-            )
+        if not sources is None:
+            for s in sources:
+                scraperwiki.sqlite.save(
+                    unique_keys=["reportURI"],
+                    data={"name": s, "reportURI": uri},
+                    table_name="source",
+                )
 
 
 base_url = "https://www.raa-sachsen.de/support/chronik?page=%s"
