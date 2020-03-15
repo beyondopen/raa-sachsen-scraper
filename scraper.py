@@ -2,11 +2,13 @@ import os
 import re
 
 import lxml.html
-import scraperwiki
 from cleantext import normalize_whitespace
 from dateparser import parse
 
 os.environ["SCRAPERWIKI_DATABASE_NAME"] = "sqlite:///data.sqlite"
+
+# must be imported after setting db name
+import scraperwiki
 
 DEBUG = False
 
