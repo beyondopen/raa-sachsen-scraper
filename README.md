@@ -1,9 +1,9 @@
 # RAA Sachsen Scraper
 
-Scraping right-wing incidents in Sachsen, Germany as monitored by the NGO [RAA Sachsen](https://www.raa-sachsen.de/startseite.html).
+Scraping right-wing incidents in Sachsen, Germany as monitored by the NGO [RAA Sachsen](https://www.raa-sachsen.de).
 
--   Website: https://www.raa-sachsen.de/chronik.html
--   Data: https://morph.io/jfilter/raa-sachsen-scraper
+-   Website: https://www.raa-sachsen.de/support/chronik
+-   Data: https://morph.io/dmedak/raa-sachsen-scraper
 
 ## Usage
 

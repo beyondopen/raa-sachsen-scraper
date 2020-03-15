@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 lxml = "*"
 scraperwiki = "*"
+clean-text = "*"
+dateparser = "*"
 
 [dev-packages]
 black = "*"
