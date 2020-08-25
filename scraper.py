@@ -80,6 +80,7 @@ def process_page(doc):
                 "description": description,
                 "title": title,
                 "date": date,
+                "subdivisions": location,
                 "iso3166_2": "DE-SN",
                 "url": uri,
                 "identifier": uri,
@@ -88,11 +89,6 @@ def process_page(doc):
             table_name="incidents",
         )
 
-        scraperwiki.sqlite.save(
-            unique_keys=["identifier"],
-            data={"subdivisions": location, "identifier": uri},
-            table_name="locations",
-        )
 
         if not sources is None:
             for s in sources:
