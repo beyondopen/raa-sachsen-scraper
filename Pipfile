@@ -8,6 +8,7 @@ lxml = "*"
 scraperwiki = "*"
 clean-text = "*"
 dateparser = "*"
+unidecode  = "*"
 
 [dev-packages]
 black = "*"
