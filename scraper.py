@@ -81,7 +81,7 @@ def process_page(doc):
         location = ", ".join([location, county, "Sachsen", "Deutschland"])
 
         scraperwiki.sqlite.save(
-            unique_keys=["identifier"],
+            unique_keys=["rg_id"],
             data={
                 "description": description,
                 "title": title,
@@ -98,8 +98,8 @@ def process_page(doc):
         if not sources is None:
             for s in sources:
                 scraperwiki.sqlite.save(
-                    unique_keys=["identifier"],
-                    data={"name": s, "identifier": uri},
+                    unique_keys=["rg_id"],
+                    data={"name": s, "rg_id": uri},
                     table_name="sources",
                 )
 
