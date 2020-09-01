@@ -89,7 +89,7 @@ def process_page(doc):
                 "subdivisions": location,
                 "iso3166_2": "DE-SN",
                 "url": uri,
-                "identifier": uri,
+                "rg_id": uri,
                 "aggregator": "RAA Sachsen",
             },
             table_name="incidents",
