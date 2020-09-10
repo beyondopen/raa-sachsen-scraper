@@ -1,9 +1,9 @@
 # RAA Sachsen Scraper
 
-Scraping right-wing incidents in Sachsen, Germany as monitored by the NGO [RAA Sachsen](https://www.raa-sachsen.de).
+Scraping right-wing incidents in Saxony (*Sachsen*), Germany as monitored by the NGO [RAA Sachsen](https://www.raa-sachsen.de).
 
--   Website: https://www.raa-sachsen.de/support/chronik
--   Data: https://morph.io/dmedak/raa-sachsen-scraper
+-   Website: <https://www.raa-sachsen.de/support/chronik>
+-   Data: <https://morph.io/dmedak/raa-sachsen-scraper>
 
 ## Usage
 
@@ -21,8 +21,8 @@ For Morph:
 
 ## Morph
 
-This is a scraper that runs on [Morph](https://morph.io). To get started [see the documentation](https://morph.io/documentation)
+This is scraper runs on [morph.io](https://morph.io). To get started [see the documentation](https://morph.io/documentation).
 
 ## License
 
-MIT.
+MIT
