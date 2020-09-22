@@ -165,11 +165,6 @@ def process_entry(entry, details_page=False, uri=None):
             county = None
             print("the city was not in the location string", location)
 
-    if county is None:
-        location = str([location])
-    else:
-        location = str([location, ["Landkreis", county]])
-
     if not sources is None:
         sources = [t.strip() for t in sources.split(",")]
     else:
@@ -195,7 +190,8 @@ def process_entry(entry, details_page=False, uri=None):
             "description": description,
             "title": title,
             "date": date,
-            "subdivisions": location,
+            "city": location,
+            "county": county,
             "url": uri,
             "rg_id": uri,
             "chronicler_name": "RAA Sachsen",
